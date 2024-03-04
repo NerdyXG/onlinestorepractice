@@ -592,8 +592,8 @@ cartButtons.forEach(cardButton => {
 // this empties the cart
 const emptyCart = document.querySelector(".empty-cart");
 emptyCart.addEventListener("click", e => {
-    let choice = prompt("Are you sure you want to empty your cart?");
-    if (choice.toLowerCase == yes) {
+    let choice = window.confirm("Are you sure you want to empty your cart?");
+    if (choice) {
         itemsNumber.innerHTML = 0;
     } else {
         alert("That was risky")
